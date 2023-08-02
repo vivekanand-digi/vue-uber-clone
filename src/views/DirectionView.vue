@@ -16,10 +16,20 @@
 
             <div class="col-span-10 pr-10">
                 <div class="w-full h-5"></div>
+
                 <div class="mb-2 mt-5">
                     <AutoCompleteInput theId="firstInput" v-model:input="pickup" placeholder="Enter pickup location"
                         @isActive="isPickupActive = true" />
                 </div>
+                <div class="mb-3">
+          <AutoCompleteInput
+            theId="secondInput"
+            v-model:input="destination"
+            placeholder="Where to?"
+            @clearInput="clearInputFunc('secondInput')"
+            @isActive="isPickupActive = false"
+          />
+        </div>
             </div>
         </div>
     </div>
@@ -29,7 +39,6 @@
 import { ref } from 'vue';
 import AutoCompleteInput from '../components/AutoCompleteInput.vue';
 import ArrowIcon from 'vue-material-design-icons/ArrowLeft.vue';
-
 let isPickupActive = ref(true);
 </script>
   

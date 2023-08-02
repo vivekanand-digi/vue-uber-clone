@@ -66,6 +66,7 @@ import MapMarkerIcon from "vue-material-design-icons/MapMarker.vue";
 </script>
 
 <style lang="scss" scoped>
+
 #Home {
   .bg-custom-color {
     background-color: rgb(237, 237, 237);
